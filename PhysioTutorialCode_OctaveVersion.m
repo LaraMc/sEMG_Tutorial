@@ -17,61 +17,61 @@
 %   Contents
 %  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%	%%	Section 2.2: Description of a signal (corresponding Section in paper)
+%	%%	Section 3.1: Description of a signal (corresponding Section in paper)
 %                   
-%       Example (i) Plot a sine wave, see Figure 2(c)
-%       Example (ii) Plot sine waves of different amplitudes, frequencies and phases, see Figure 3 
+%       Example (i) Plot a sine wave, see Figure 3(c)
+%       Example (ii) Plot sine waves of different amplitudes, frequencies and phases, see Figure 4 
 %
-%   %%  Section 2.3: Frequency domain analysis
+%   %%  Section 3.2: Frequency domain analysis
 %
-%       Example (iii) Plot sine/square wave in Time and Frequency Domain, see Figure 4
+%       Example (iii) Plot sine/square wave in Time and Frequency Domain, see Figure 5
 %
-%   %%  Section 3.4: Sampling
+%   %%  Section 4.4: Sampling
 %
-%       Example (iv) Show effect of different sampling rates on the frequency spectrum, see Figure 7
+%       Example (iv) Show effect of different sampling rates on the frequency spectrum, see Figure 8
 %
 %   %%  Section A.2: Zero-padding
 %
 %       Example (v) Show effect of zero-padding on the spacing between frequency bins, see Figure A1
 %       Example (vi) Illustrate difference between frequency resolution and the spacing between frequency bins
 %
-%   %%	Section 4.1 (see also Section A.1): Power Spectral Density Estimation (Surface EMG in the Frequency Domain)
+%   %%	Section 5.1 (see also Section A.1): Power Spectral Density Estimation (Surface EMG in the Frequency Domain)
 %
-%       Example (vii) Calculate power spectrum for different epoch lengths and overlaps, see Figure 8
+%       Example (vii) Calculate power spectrum for different epoch lengths and overlaps, see Figure 9
 %
-%       Example (viii) Effect of multiplying signal by different window functions, see Figure 8 (c)
+%       Example (viii) Effect of multiplying signal by different window functions, see Figure 9 (c)
 %
-%   %%	Section 4.2: Filtering
+%   %%	Section 5.2: Filtering
 %
-%       Example (ix) Illustrate the attenuation/roll-off characteristics of different filters, see Figure 9 (a)
-%       Example (x) Examples of low-pass, high-pass, band-pass and notch filters, see Figure 9 (a)
+%       Example (ix) Illustrate the attenuation/roll-off characteristics of different filters, see Figure 10 (a)
+%       Example (x) Examples of low-pass, high-pass, band-pass and notch filters, see Figure 10 (a)
 %
-%   %%	Section 3.2: Choice of Electrode: 
+%   %%	Section 4.2: Choice of Electrode: 
 %
-%       Example (xi) Demonstrate effect of Inter-Electrode Distance (IED), see Figure 5
+%       Example (xi) Demonstrate effect of Inter-Electrode Distance (IED), see Figure 6
 %
-%   %%	Section 3.3: Choice of Amplifier
+%   %%	Section 4.3: Choice of Amplifier
 %
-%       Example (xii) Demonstrate signal amplification with differential filter, see Figure 6 (c)
-%       Example (xiii) Calculate CMRR, see Equation 9
+%       Example (xii) Demonstrate signal amplification with differential filter, see Figure 7 (c)
+%       Example (xiii) Calculate CMRR
 %
-%   %%  Section 4.3: Surface EMG amplitude features
+%   %%  Section 5.3: Surface EMG amplitude features
 %
-%       Example (xiv) Plot gait data, see Figure 10
+%       Example (xiv) Plot gait data, see Figure 11
 %       Example (xv) Calculate the Root-Mean Square value and the Average Rectified value of an EMG signal
 %       Example (xvi) Calculate the average of the surface EMG signal for 3 separate segments
 %
-%   %% Section 4.4: Surface EMG spectral features
+%   %% Section 5.4: Surface EMG spectral features
 %
-%       Example (xvii) Calculate the Mean Frequency and the Median Frequency of the surface EMG signal, see Figure 11
+%       Example (xvii) Calculate the Mean Frequency and the Median Frequency of the surface EMG signal, see Figure 12
 %       Example (xviii) Calculating the coherence between two EMG signals, Figure A2
 %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Section 3: Key concepts in signal processing
 
-%% Section 2.2: Description of a signal
+%% Section 3.1: Description of a signal
 
-%% Example (i) Plot a sine wave (see Figure 2(c))
+%% Example (i) Plot a sine wave (see Figure 3(c))
 clear all;
 A=1;                                                    %Amplitude of the sine wave
 phi=0;                                                  %Phase of the sine wave
@@ -84,7 +84,7 @@ plot(t,y)
 xlabel('Time (s)')
 ylabel('y(t)')
 
-%%  Example (ii) Plot sine waves of different amplitudes, frequencies and phases, see Figure 3
+%%  Example (ii) Plot sine waves of different amplitudes, frequencies and phases, see Figure 4
 
 clear all;
 % Change amplitude
@@ -136,9 +136,9 @@ xlabel('Time (s)')
 ylabel('y(t)')
 legend({'\phi = 0'; '\phi = \pi/2 = 90^{\circ}'; '\phi = \pi = 180^{\circ}'})
 
-%% Section 2.3: Frequency domain analysis
+%% Section 3.2: Frequency domain analysis
 
-%%  Example (iii) Plot sine/square wave in Time and Frequency Domain, see Figure 4
+%%  Example (iii) Plot sine/square wave in Time and Frequency Domain, see Figure 5
 
 %Time Domain
 clear all
@@ -232,9 +232,9 @@ title('Frequency Domain - Power Spectrum Triangle Wave')
 %Note: see Example (vii) for time and frequency domain representations of 
 %real EMG signals.
 
-%% Section 3.4: Sampling
+%% Section 4.4: Sampling
 
-%%  Example (iv) Show effect of different sampling rates on the frequency spectrum, see Figure 7
+%%  Example (iv) Show effect of different sampling rates on the frequency spectrum, see Figure 8
 
 %Time Domain
 clear all
@@ -556,9 +556,9 @@ title('Increase Signal Length Further, Decrease \DeltaR Further')
 %Correct amplitude level is 1
 plot([0 100],[1 1],'k--')
 
-%% Section 4.1 (see also Section A.1): Power Spectral Density Estimation 
+%% Section 5.1 (see also Section A.1): Power Spectral Density Estimation 
 
-%% Example (vii) Calculate power spectrum for different epoch lengths and overlaps, see Figure 8
+%% Example (vii) Calculate power spectrum for different epoch lengths and overlaps, see Figure 9
 
 clear all
 pkg load signal    
@@ -704,7 +704,7 @@ xlabel('Frequency (Hz)')
 ylabel('\muV^2/Hz')
 
 
-%% Example (viii) Effect of multiplying signal by different window functions, see Figure 8 (c)
+%% Example (viii) Effect of multiplying signal by different window functions, see Figure 9 (c)
 clear all;
 load('Tutorial_EMG_sig.mat')
 fs=2000;%Sampling frequency
@@ -769,9 +769,9 @@ ylim([-1.15 1.15])
 xlabel('Time (s)')
 ylabel('mV')
 
-%% Section 4.2: Filtering, Figure 9
+%% Section 5.2: Filtering, Figure 10
 
-%% Example (ix) Illustrate the attenuation/roll-off characteristics of different filters, see Figure 9 (a)
+%% Example (ix) Illustrate the attenuation/roll-off characteristics of different filters, see Figure 10 (a)
 clear all;
 % Filter examples: Butterworth and Chebyshev Type I
 % Two filter examples with a different order and roll-off
@@ -827,7 +827,7 @@ set(gca,'XTick',[0:1:3])
 text(.55 ,0.85,[{'~160 dB Roll-off';'Steeper Slope'}],'Units','normalized')
 title([num2str(FilterOrder2),'th Order Chebyshev Type I Filter'])
 
-%% Example (x) Examples of low-pass, high-pass, band-pass and notch filters, see Figure 9 (a)
+%% Example (x) Examples of low-pass, high-pass, band-pass and notch filters, see Figure 10 (a)
 
 clear all;
 load('Tutorial_EMG_sig.mat')
@@ -1013,9 +1013,9 @@ xlim([0 500])
 xlabel('Frequency (Hz)')
 ylabel('\muV^2/Hz')
 
-%% Section 3.2: Choice of Electrode: 
+%% Section 4.2: Choice of Electrode: 
 
-%% Example (xi) Demonstrate effect of Inter-Electrode Distance (IED), see Figure 5
+%% Example (xi) Demonstrate effect of Inter-Electrode Distance (IED), see Figure 6
 
 %Two data-sets with different IEDs
 clear all;
@@ -1085,9 +1085,9 @@ xlim([0 500])
 % cannot be directly compared, as they were recorded in different muscles, under different conditions, 
 % with different electrodes
 
-%% Section 3.3: Choice of Amplifier
+%% Section 4.3: Choice of Amplifier
 
-%% Example (xii) Demonstrate signal amplification with differential filter, see Figure 6 (c)
+%% Example (xii) Demonstrate signal amplification with differential filter, see Figure 7 (c)
 clear all;
 %Generate simple sine waves to demonstrate signal amplification using a
 %differential amplifier
@@ -1143,8 +1143,8 @@ title('V_{out}')
 xlabel('Time (s)')
 ylabel('Amplitude')
 
- %% Example (xiii) Calculate CMRR, see Equation 9
-
+ %% Example (xiii) Calculate CMRR
+ 
 % Calculate the common-mode rejection ratio (CMRR) of an amplifier given
 % the differential gain, Ad, and the common-mode gain, Acm
 
@@ -1155,9 +1155,9 @@ CMRR=20*log(abs(Ad/Acm));
 
 %% Section 5: EMG Signal Analysis Techniques
 
-%% Section 4.3: Surface EMG amplitude features
+%% Section 5.3: Surface EMG amplitude features
 
- %% Example (xiv) Plot gait data, see Figure 10
+ %% Example (xiv) Plot gait data, see Figure 11
 
 % Plot EMG gait data from the soleus muscle during walking, with heel
 % strike and toe-off information.
@@ -1169,7 +1169,7 @@ dt=1/fs;
 
 t=[0:length(EMG_Gait_sig_2k)-1].*dt;
 figure;
-% see Figure 10 (a)
+% see Figure 11 (a)
 subplot(4,1,1)
 h1=plot(t,EMG_Gait_sig_2k);                                 %Plot raw EMG data during walking
 hold on;
@@ -1181,7 +1181,7 @@ title('Raw sEMG Signal')
 legend([h1,h2(1),h3(1)],'EMG Signal','Heel Strike','Toe off')
 
 %Plot the absolute value of the EMG gait data
-% see Figure 10 (b)
+% see Figure 11 (b)
 subplot(4,1,2)
 plot(t,abs(EMG_Gait_sig_2k-mean(EMG_Gait_sig_2k)))          %Plot rectified EMG data during walking
 xlabel('Time (s)')
@@ -1226,7 +1226,7 @@ tk_env_norm = tk_env/max(abs(tk_env));                      %Normalising the tea
 t2 = 1/fs:1/fs:length(tk_env_norm)/fs;                      %time vector to be used in the final plot
 
 %Plot the outline or "shape" of the EMG signal
-% see Figure 10 (c)
+% see Figure 11 (c)
 
 subplot(4,1,3)
 plot(t2,tk_env_norm)                                        %Plot teager kaiser envelope
@@ -1275,7 +1275,7 @@ for index=StartWin
 end
 
 %Low-pass filtering the EMG signal is an alternative way of calculating a "moving average"
-% see Figure 10 (d)
+% see Figure 11 (d)
 subplot(4,1,4)
 h1=plot((StartWin/fs)+(WinLen/2),rmsfunc);
 hold on;
@@ -1384,9 +1384,9 @@ ARV3=(1/length(Segment3)).*sum(abs(EMG_AmpChange_sig_2k(Segment3)));
 
 fprintf(1, 'ARV-EMG Segment 1: %f\nARV-EMG Segment 2: %f\nARV-EMG Segment 3: %f\n', [ARV1;ARV2;ARV3]);
 
-%% Section 4.4: Surface EMG spectral features
+%% Section 5.4: Surface EMG spectral features
 
-%% Example (xvii) Calculate the Mean Frequency and the Median Frequency of the surface EMG signal, see Figure 11
+%% Example (xvii) Calculate the Mean Frequency and the Median Frequency of the surface EMG signal, see Figure 12
 
 clear all;
 % EMG signals from the start and end of a fatiguing isometric contraction
